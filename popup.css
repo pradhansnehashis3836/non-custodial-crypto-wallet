@@ -1,0 +1,50 @@
+body {
+  width: 350px;
+  margin: 0;
+  font-family: Arial;
+  background: #121212;
+  color: white;
+}
+
+.container {
+  padding: 12px;
+}
+
+.card {
+  background: #1f1f1f;
+  padding: 12px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+input, select, button {
+  width: 100%;
+  margin-top: 6px;
+  padding: 8px;
+  border-radius: 6px;
+  border: none;
+}
+
+input, select {
+  background: #2c2c2c;
+  color: white;
+}
+
+button {
+  background: #4cafef;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+.small {
+  font-size: 12px;
+  word-break: break-all;
+}
+
+ul {
+  padding-left: 18px;
+}

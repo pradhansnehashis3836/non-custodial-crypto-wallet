@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Crypto Wallet</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+
+<div class="container">
+
+  <!-- LOCK SCREEN -->
+  <div id="lockScreen" class="card">
+    <h2>🔐 Unlock Wallet</h2>
+    <input type="password" id="unlockPassword" placeholder="Enter password">
+    <button id="unlockBtn">Unlock</button>
+    <p id="lockMsg"></p>
+  </div>
+
+  <!-- SETUP SCREEN -->
+  <div id="setupScreen" class="card hidden">
+    <h2>Create Wallet</h2>
+    <input type="password" id="newPassword" placeholder="Create password">
+    <button id="createWallet">Create Wallet</button>
+    <button id="restoreWallet">Restore Wallet</button>
+  </div>
+
+  <!-- MNEMONIC -->
+  <div id="mnemonicScreen" class="card hidden">
+    <h3>Seed Phrase</h3>
+    <p id="mnemonicWords"></p>
+    <button id="confirmMnemonic">I Saved It</button>
+  </div>
+
+  <!-- DASHBOARD -->
+  <div id="dashboard" class="hidden">
+
+    <div class="card">
+      <h3>Wallet</h3>
+      <p class="small" id="walletAddress"></p>
+      <button id="copyAddress">Copy Address</button>
+    </div>
+
+    <div class="card">
+      <select id="network">
+        <option value="eth">Ethereum</option>
+        <option value="polygon">Polygon</option>
+      </select>
+      <p><b>Balance:</b> <span id="balance">0</span></p>
+    </div>
+
+    <!-- TOKENS -->
+    <div class="card">
+      <h3>Tokens</h3>
+      <ul id="tokenList"></ul>
+      <input id="tokenAddress" placeholder="ERC20 Token Address">
+      <button id="addToken">Add Token</button>
+    </div>
+
+    <!-- SEND -->
+    <div class="card">
+      <h3>Send</h3>
+      <input id="to" placeholder="Recipient Address">
+      <input id="amount" placeholder="Amount">
+      <button id="sendTx">Send</button>
+      <p id="txStatus"></p>
+    </div>
+
+    <!-- HISTORY -->
+    <div class="card">
+      <h3>Transaction History</h3>
+      <ul id="txHistory"></ul>
+    </div>
+
+  </div>
+
+</div>
+
+<script src="ethers.min.js"></script>
+<script src="crypto.js"></script>
+<script src="wallet.js"></script>
+<script src="popup.js"></script>
+
+</body>
+</html>

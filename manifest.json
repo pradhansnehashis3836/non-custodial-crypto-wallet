@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "Non-Custodial Crypto Wallet",
+  "version": "1.0",
+  "description": "A secure non-custodial Ethereum wallet using Ethers.js",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": ["storage"],
+  "background": {
+    "service_worker": "background.js"
+  }
+}
